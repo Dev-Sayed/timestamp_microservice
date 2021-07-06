@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
     timestamp = myDateObj.valueOf();
     myDateStr = myDateObj.toString();
     myArr = myDateStr.split(" ");
-    myFinalDateStr = `${myArr[0]}, ${myArr[2]} ${myArr[1]} ${myArr[3]} ${myArr[4]} ${myArr[5]}`;
+    myFinalDateStr = `${myArr[0]}, ${myArr[2]} ${myArr[1]} ${myArr[3]} ${myArr[4]} GMT`;
     res.json({unix: timestamp, utc: myFinalDateStr});
 });
 
@@ -28,7 +28,7 @@ router.get("/:date", (req, res) => {
             timestamp = myDateObj.valueOf();
             myDateStr = myDateObj.toString();
             myArr = myDateStr.split(" ");
-            myFinalDateStr = `${myArr[0]}, ${myArr[2]} ${myArr[1]} ${myArr[3]} ${myArr[4]} ${myArr[5]}`;
+            myFinalDateStr = `${myArr[0]}, ${myArr[2]} ${myArr[1]} ${myArr[3]} ${myArr[4]} GMT`;
             res.json({unix: timestamp, utc: myFinalDateStr});
         }
     } else {
@@ -40,7 +40,7 @@ router.get("/:date", (req, res) => {
             timestamp = myDateObj.valueOf();
             myDateStr = myDateObj.toString();
             myArr = myDateStr.split(" ");
-            myFinalDateStr = `${myArr[0]}, ${myArr[2]} ${myArr[1]} ${myArr[3]} ${myArr[4]} ${myArr[5]}`;
+            myFinalDateStr = `${myArr[0]}, ${myArr[2]} ${myArr[1]} ${myArr[3]} ${myArr[4]} GMT`;
             res.json({unix: timestamp, utc: myFinalDateStr});
         }
     }
